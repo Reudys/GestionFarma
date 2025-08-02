@@ -31,3 +31,4 @@ C:\Users\Rey\Desktop\Proyecto3\GestionFarma\obj\Debug\net8.0\refint\GestionFarma
 C:\Users\Rey\Desktop\Proyecto3\GestionFarma\obj\Debug\net8.0\GestionFarma.pdb
 C:\Users\Rey\Desktop\Proyecto3\GestionFarma\obj\Debug\net8.0\GestionFarma.genruntimeconfig.cache
 C:\Users\Rey\Desktop\Proyecto3\GestionFarma\obj\Debug\net8.0\ref\GestionFarma.dll
+C:\Users\Rey\Desktop\Proyecto3\GestionFarma\obj\Debug\net8.0\GestionFarma.sourcelink.json

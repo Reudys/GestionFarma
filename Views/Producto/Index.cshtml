@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Producto>
+
+@{
+    ViewData["Title"] = "Productos de Farmacia";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Productos de Farmacia</h1>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @foreach (var producto in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary fw-bold">
+                            <i class="bi bi-capsule-pill"></i> @producto.Name
+                        </h5>
+                        <p class="card-text text-muted">@producto.Description</p>
+                        <hr />
+                        <p class="mb-1"><strong>Precio:</strong> <span class="text-success">@producto.Price.ToString("C")</span></p>
+                        <p><strong>Caduca:</strong> @producto.ExpirationDate.ToString("dd/MM/yyyy")</p>
+                    </div>
+                    <div class="card-footer bg-transparent text-end">
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
