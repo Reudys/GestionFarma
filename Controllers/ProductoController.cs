@@ -60,5 +60,27 @@ namespace GestionFarma.Controllers
             productos.Add(producto);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            var producto = productos.FirstOrDefault(p => p.Id == id);
+            if (producto == null) return NotFound();
+            return View(producto);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(Producto producto)
+        {
+            if (!ModelState.IsValid) return View(producto);
+            var existingProducto = productos.FirstOrDefault(p => p.Id == producto.Id);
+            if (existingProducto == null) return NotFound();
+            existingProducto.Name = producto.Name;
+            existingProducto.Description = producto.Description;
+            existingProducto.Price = producto.Price;
+            existingProducto.ExpirationDate = producto.ExpirationDate;
+            return RedirectToAction("Index");
+        }
     }
 }

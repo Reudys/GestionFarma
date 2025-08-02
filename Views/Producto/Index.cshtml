@@ -22,7 +22,7 @@
                         <p><strong>Caduca:</strong> @producto.ExpirationDate.ToString("dd/MM/yyyy")</p>
                     </div>
                     <div class="card-footer bg-transparent text-end">
-
+                        <a class="btn btn-outline-primary btn-sm" asp-action="Update" asp-route-id="@producto.Id">Actualizar</a>
                     </div>
                 </div>
             </div>
