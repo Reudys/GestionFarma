@@ -44,5 +44,21 @@ namespace GestionFarma.Controllers
         {
             return View(productos);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Producto producto)
+        {
+            if (!ModelState.IsValid) return View(producto);
+            producto.Id = nextId++;
+            productos.Add(producto);
+            return RedirectToAction("Index");
+        }
     }
 }
