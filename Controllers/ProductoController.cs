@@ -82,5 +82,23 @@ namespace GestionFarma.Controllers
             existingProducto.ExpirationDate = producto.ExpirationDate;
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var producto = productos.FirstOrDefault(p => p.Id == id);
+            if (producto == null) return NotFound();
+            return View(producto);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var producto = productos.FirstOrDefault(p => p.Id == id);
+            if (producto == null) return NotFound();
+            productos.Remove(producto);
+            return RedirectToAction("Index");
+        }
     }
 }
