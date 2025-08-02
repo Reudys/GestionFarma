@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionFarma")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+748712cde588ca13b558e7fdf92955b011080682")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd7bd4d51ae9ae24c767b83fd32dbb535c4d14a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionFarma")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionFarma")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
